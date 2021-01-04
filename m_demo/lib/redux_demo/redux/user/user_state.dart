@@ -1,7 +1,7 @@
 import 'package:built_value/built_value.dart';
 import 'package:built_value/serializer.dart';
 import 'dart:convert';
-import 'package:m_demo/data/model/serializers.dart';
+import 'package:m_demo/redux_demo/data/model/serializers.dart';
 part 'user_state.g.dart';
 
 abstract class UserState implements Built<UserState, UserStateBuilder> {

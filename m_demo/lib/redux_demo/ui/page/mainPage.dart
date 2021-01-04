@@ -1,10 +1,10 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:m_demo/ui/material/asymmetric_view.dart';
-import 'package:m_demo/data/model/category.dart';
+import 'package:m_demo/redux_demo//ui/material/asymmetric_view.dart';
+import 'package:m_demo/redux_demo//data/model/category.dart';
 import 'dart:math' as math;
 
-import 'package:m_demo/theme/appTheme.dart';
+import 'package:m_demo/redux_demo//theme/appTheme.dart';
 
 class MainPage extends StatefulWidget {
   @override

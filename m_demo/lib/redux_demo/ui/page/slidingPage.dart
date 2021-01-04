@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:m_demo/ui/material/silding_transformer.dart';
-import 'package:m_demo/ui/material/sliding_item.dart';
-import 'package:m_demo/data/model/slidingboxdata.dart';
+import 'package:m_demo/redux_demo/ui/material/silding_transformer.dart';
+import 'package:m_demo/redux_demo/ui/material/sliding_item.dart';
+import 'package:m_demo/redux_demo/data/model/slidingboxdata.dart';
 
 class SlidingPage extends StatefulWidget {
 

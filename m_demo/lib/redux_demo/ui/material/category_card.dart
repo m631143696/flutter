@@ -14,7 +14,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:m_demo/data/model/category.dart';
+import 'package:m_demo/redux_demo/data/model/category.dart';
 
 class CategoryCard extends StatelessWidget {
   CategoryCard({this.imageAspectRatio: 33 / 49, this.asset})

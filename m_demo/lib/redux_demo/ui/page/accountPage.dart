@@ -2,36 +2,39 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
-import 'package:m_demo/ui/material/animation.dart';
-import 'package:m_demo/ui/material/navigation_drawer.dart';
-import 'package:m_demo/theme/appTheme.dart';
+import 'package:m_demo/redux_demo/ui/material/animation.dart';
+import 'package:m_demo/redux_demo/ui/material/navigation_drawer.dart';
+import 'package:m_demo/redux_demo/theme/appTheme.dart';
 import 'package:flutter/animation.dart';
+import 'package:m_demo/redux_demo/ui/view_model/user_vm.dart';
 
 class AccountPage extends StatefulWidget {
-  String Name;
+  final UserVM viewModel;
+  const AccountPage({Key key, this.viewModel}) : super(key: key);
   @override
   AccountPageState createState() => AccountPageState();
 }
 
-class AccountPageState extends State<AccountPage> with SingleTickerProviderStateMixin {
+class AccountPageState extends State<AccountPage>
+    with SingleTickerProviderStateMixin {
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
-  AnimationController _animationController ;
+  AnimationController _animationController;
   Animation<double> _animation;
 
   @override
   void initState() {
     super.initState();
     _animationController = AnimationController(
-      vsync: this,duration: Duration(milliseconds: 1400)
-    );
-    _animation = CurvedAnimation(parent:  _animationController,curve:  Curves.linear);
+        vsync: this, duration: Duration(milliseconds: 1400));
+    _animation =
+        CurvedAnimation(parent: _animationController, curve: Curves.linear);
 
-    _animationController.addStatusListener((status){
-      if(status == AnimationStatus.completed){
-        Future.delayed(Duration(milliseconds: 500),(){
-            _animationController.reset();
+    _animationController.addStatusListener((status) {
+      if (status == AnimationStatus.completed) {
+        Future.delayed(Duration(milliseconds: 500), () {
+          _animationController.reset();
         });
-      }else if(status == AnimationStatus.dismissed){
+      } else if (status == AnimationStatus.dismissed) {
         _animationController.forward();
       }
     });
@@ -134,7 +137,7 @@ class AccountPageState extends State<AccountPage> with SingleTickerProviderState
                           alignment: Alignment.topCenter,
                           padding: EdgeInsets.fromLTRB(0, 60, 100, 0),
                           child: Text(
-                            '古月依稀',
+                            widget.viewModel.userState.userName,
                             // style: TextStyle(
                             //     color: AppTheme.of(context).brightness ==
                             //             Brightness.light
@@ -156,5 +159,4 @@ class AccountPageState extends State<AccountPage> with SingleTickerProviderState
           ),
         ));
   }
-
 }

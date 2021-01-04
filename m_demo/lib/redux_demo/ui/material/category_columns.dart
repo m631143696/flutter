@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'package:m_demo/data/model/category.dart';
+import 'package:m_demo/redux_demo/data/model/category.dart';
 import 'category_card.dart';
 
 class TwoCategoryCardColumn extends StatelessWidget {

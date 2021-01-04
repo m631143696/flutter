@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
-import 'package:m_demo/data/model/slidingboxdata.dart';
+import 'package:m_demo/redux_demo/data/model/slidingboxdata.dart';
 import '../material/silding_transformer.dart';
 
 class SlidingPageItem extends StatelessWidget {

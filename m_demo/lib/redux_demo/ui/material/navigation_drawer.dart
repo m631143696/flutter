@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart' show DragStartBehavior;
-import 'package:m_demo/ui/page/settingsPage.dart';
-import 'package:m_demo/theme/appTheme.dart';
+import 'package:m_demo/redux_demo/ui/page/settingsPage.dart';
+import 'package:m_demo/redux_demo/theme/appTheme.dart';
 
 class NavigationDrawer extends StatefulWidget {
   static const String routeName = '/material/drawer';

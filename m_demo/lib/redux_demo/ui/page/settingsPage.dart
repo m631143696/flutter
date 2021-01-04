@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:m_demo/theme/appTheme.dart';
+import 'package:m_demo/redux_demo/theme/appTheme.dart';
 import 'package:flutter/cupertino.dart';
 
 bool _statusBarHidden = false;

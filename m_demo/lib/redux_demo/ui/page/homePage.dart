@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:m_demo/ui/material/bottom_navigation.dart';
-import 'package:m_demo/ui/page/slidingPage.dart';
-import 'package:m_demo/theme/appTheme.dart';
+import 'package:m_demo/redux_demo/ui/material/bottom_navigation.dart';
+import 'package:m_demo/redux_demo/ui/page/slidingPage.dart';
+import 'package:m_demo/redux_demo/theme/appTheme.dart';
+import 'package:m_demo/redux_demo/ui/view_model/user_vm.dart';
 import 'accountPage.dart';
 import 'mainPage.dart';
 import 'cookbookPage.dart';
@@ -52,7 +53,7 @@ class HomePageState extends State<HomePage> with TickerProviderStateMixin {
       MainPage(),
       CookHomePage(),
       SlidingPage(),
-      AccountPage(),
+      AccountScreenBuilder(),
     ];
   }
   @override

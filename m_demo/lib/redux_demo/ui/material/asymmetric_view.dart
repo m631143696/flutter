@@ -13,7 +13,7 @@
 // limitations under the License.
 
 import 'package:flutter/material.dart';
-import 'package:m_demo/data/model/category.dart';
+import 'package:m_demo/redux_demo/data/model/category.dart';
 import 'category_columns.dart';
 
 class AsymmetricView extends StatelessWidget {

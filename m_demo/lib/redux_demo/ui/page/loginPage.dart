@@ -2,11 +2,11 @@ import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import '../view_model/login_vm.dart';
+import '../view_model/user_vm.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key key, this.viewModel}) : super(key: key);
-  final LoginVM viewModel;
+  final UserVM viewModel;
   @override
   LoginPageState createState() => LoginPageState();
 }
@@ -129,7 +129,7 @@ class LoginPageState extends State<LoginPage> {
                               _nameIsComposing = false;
                               _pswIsComposing = false;
                             });
-                            widget.viewModel.login(context);
+                            widget.viewModel.login(context,nameController.text,pswController.text);
                           }
                         : null),
               ],
